@@ -37,10 +37,12 @@ void push(stack *input_stack, int value) {
 
 void user_push(stack *input_stack) {
   int value;
+
   while (scanf("%d", &value) != EOF) {
     push(input_stack, value);
   }
 }
+
 int peek(stack *input_stack) {
   if (input_stack->size == 0) {
     printf("The stack is empty.\n");
