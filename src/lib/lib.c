@@ -19,12 +19,14 @@ stack create_stack() {
   return_stack.size = 0;
   return return_stack;
 }
+
 node *create_node(int value) {
   node *return_node = malloc(sizeof(node));
   return_node->next = NULL;
   return_node->value = value;
   return return_node;
 }
+
 void push(stack *input_stack, int value) {
   node *current_head = input_stack->head;
   node *new_head = create_node(value);
@@ -32,19 +34,29 @@ void push(stack *input_stack, int value) {
   input_stack->head = new_head;
   input_stack->size++;
 }
+
+void user_push(stack *input_stack) {
+  int value;
+  while (scanf("%d", &value) != EOF) {
+    push(input_stack, value);
+  }
+}
 int peek(stack *input_stack) {
   if (input_stack->size == 0) {
     printf("The stack is empty.\n");
     return 0;
   }
+
   int return_value = input_stack->head->value;
   return return_value;
 }
+
 int pop(stack *input_stack) {
   if (input_stack->size == 0) {
     printf("Nothing to pop\n");
     return 0;
   }
+
   node *current_node = input_stack->head;
   node *next_node = current_node->next;
   input_stack->head = next_node;
@@ -53,6 +65,7 @@ int pop(stack *input_stack) {
   input_stack->size--;
   return return_value;
 }
+
 void delete_stack(stack *input_stack) {
   while (input_stack->size > 0) {
     pop(input_stack);

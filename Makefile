@@ -26,3 +26,7 @@ run:$(TARGET_DEBUG)
 	./$<
 r_run:$(TARGET_RELEASE)
 	./$<
+test:$(TARGET_DEBUG)
+	echo "5 4 3 2 1" | ./$<
+r_test:$(TARGET_RELEASE)
+	echo "5 4 3 2 1" | ./$<

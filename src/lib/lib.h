@@ -21,4 +21,5 @@ void push(stack *, int);
 int peek(stack *);
 int pop(stack *);
 void delete_stack(stack *);
+void user_push(stack *);
 #endif
