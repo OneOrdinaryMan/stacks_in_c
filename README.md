@@ -3,7 +3,7 @@ Stacks are __Last In First Out(LIFO)__ type data structures. Stacks are linked l
 
 - [x] Peek
 - [x] Push
-- [ ] Pop
+- [x] Pop
 
 ## Stack data structure.
 The Stack will contain a bunch of nodes. Nodes will contain the value and the pointer to next node. The stack will contain the head pointer and the size of pointer.
