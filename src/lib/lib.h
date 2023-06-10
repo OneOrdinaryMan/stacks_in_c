@@ -9,8 +9,16 @@ struct Node {
 };
 
 typedef struct Node node;
+
 typedef struct {
   node *head;
   int size;
 } stack;
+
+stack create_stack();
+node *create_node(int);
+void push(stack *, int);
+int peek(stack *);
+int pop(stack *);
+void delete_stack(stack *);
 #endif
