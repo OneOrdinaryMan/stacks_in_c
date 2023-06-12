@@ -73,4 +73,5 @@ int pop(stack *input_stack) {
 }
 ```
 # Licence
+***
 This project is licensed under <mark>GPL.3.0 or later</mark> license. Feel free to use the code.
