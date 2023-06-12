@@ -1,4 +1,5 @@
 # Stacks in C
+***
 Stacks are __Last In First Out(LIFO)__ type data structures. Stacks are linked list based. Stacks have following methods,
 
 - [x] Peek
@@ -6,6 +7,7 @@ Stacks are __Last In First Out(LIFO)__ type data structures. Stacks are linked l
 - [x] Pop
 
 ## Stack data structure.
+***
 The Stack will contain a bunch of nodes. Nodes will contain the value and the pointer to next node. The stack will contain the head pointer and the size of pointer.
 
 __Pseudo Code__
@@ -21,6 +23,7 @@ typedef struct {
 } stack;
 ```
 ## Peek function
+***
 The peek function does one simple thing.It returns the value of the head node without destroying it. If there is no nodes in the stack, it will return 0.
 
 __Pseudo Code__
@@ -34,8 +37,8 @@ int peek(stack *input_stack) {
   return return_value;
 }
 ```
-
 ## Push function
+***
 The push function inserts the node at the head of the stack. So, a new node is created the head of the previous node is saved in the next of the new node and head of the stack
 is changed to the address of the new node. The size of the stack is incremented.
 
@@ -50,6 +53,7 @@ void push(stack *input_stack, int value) {
 }
 ```
 ## Pop function
+***
 The pop function removes the current head and replaces the head with the next node. It returns the value of the current head. The removed head is then freed.
 
 __Pseudo Code__
@@ -68,3 +72,5 @@ int pop(stack *input_stack) {
   return return_value;
 }
 ```
+# Licence
+This project is licensed under <mark>GPL.3.0 or later</mark> license. Feel free to use the code.
